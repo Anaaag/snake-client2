@@ -1,12 +1,9 @@
 const {connect} = require("./client");
-
-
-
-const { Server } = require("http");
-
+const {setUpInput} = require("./input")
 
 
 
 console.log("Connecting ...");
 connect();
 
+setUpInput();
