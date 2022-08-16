@@ -1,5 +1,5 @@
 let connection;
-const setUpInput = function (conn) {
+const setUpInput = function(conn) {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -15,23 +15,25 @@ const handleUserInput = function(key) {
   }
 
   if (key === 'w') {
-    connection.write("Move: up")
+    connection.write("Move: up");
   }
 
   if (key === 'a') {
-    connection.write("Move: left")
+    connection.write("Move: left");
   }
 
   if (key === 's') {
-    connection.write("Move: down")
+    connection.write("Move: down");
   }
 
   if (key === 'd') {
-    connection.write("Move: right")
+    connection.write("Move: right");
   }
 
-  connection.write("Say: How are you?")
+  if (key === 'e') {
+    connection.write("Say: How are you?");
+  }
 
-}
+};
 
 module.exports = { setUpInput};
