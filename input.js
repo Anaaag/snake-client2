@@ -34,6 +34,10 @@ const handleUserInput = function(key) {
     connection.write("Say: How are you?");
   }
 
+  if (key === 'q') {
+    connection.write("Say: I'm gonna win");
+  }
+
 };
 
 module.exports = { setUpInput};
